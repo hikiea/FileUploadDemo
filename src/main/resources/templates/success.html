@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>上传成功</title>
+</head>
+<body>
+上传成功
+
+<form method="post" action="/showHead">
+    你要查询的id
+    <input name="id" type="text">
+    <button name="doShow" type="submit" value="查询">查询</button>
+</form>
+
+<div th:each="head:${byId}">
+    <span th:text="${head.getId()}"></span><br>
+    <span th:text="${head.getHeadAddress()}"></span><br>
+    <!--    <span th:href="@{result.getHeadAddress()}"></span>-->
+    <img th:src="@{'/picture/'+${head.getHeadName()}}"></img>
+</div>
+<!--<img src="/picture/1234.jpg" height="500" width="750"/></body>-->
+
+</body>
+</html>
