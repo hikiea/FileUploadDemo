@@ -49,7 +49,7 @@ public class FileController {
             String HeadName = hToken + fileName;
 
             // 5. 图片存放的文件夹地址
-            String filePath = "C:\\Users\\Lzy\\Desktop\\demo\\src\\main\\resources\\static\\picture\\";
+            String filePath = "C:\\Users\\Lzy\\Desktop\\FileUploadDemo\\src\\main\\resources\\static\\picture\\";
             // 6.  图片的路径 = 文件夹地址 + 名字
             String fileAddress = filePath + HeadName;
             try{

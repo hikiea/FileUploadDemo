@@ -11,6 +11,6 @@ public class ImgConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         // addResourceHandler: （ 存储图片的虚拟路径，在 static 目录下的 picture 文件夹，用于存储上传图片）
         // addResourceLocations: （ file: + 存储图片的路径）
-        registry.addResourceHandler("/picture/**").addResourceLocations("file:" + "C:/Users/Lzy/Desktop/demo/src/main/resources/static/picture/");
+        registry.addResourceHandler("/picture/**").addResourceLocations("file:" + "C:/Users/Lzy/Desktop/FileUploadDemo/src/main/resources/static/picture/");
     }
 }
