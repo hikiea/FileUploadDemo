@@ -10,12 +10,18 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Mapper@Repository
+@Mapper
+@Repository
 public interface AddHeadAddress {
     @Insert("insert into head(headAddress,headName) values (#{headAddress},#{headName})")
     void insert(Head head);
 
     @Select("SELECT * FROM head where (id) = (#{id})")
     List<Head> getById(@Param("id") Integer id);
+
+    @Select("select * from head")
+    List<Head> getAll();
+
+
 
 }

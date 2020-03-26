@@ -58,12 +58,10 @@ public class FileController {
                 // 参数二：图片存放的文件夹地址
                 // 参数三：图片的名字（加密后）
                 FileUtil.uploadFile(file.getBytes(),filePath,HeadName);
-
                 // 把图片路径,图片名写入数据库
                 head.setHeadAddress(fileAddress);
                 head.setHeadName(HeadName);
                 addHeadAddress.insert(head);
-
             } catch (Exception e){
             }
             return "success";
