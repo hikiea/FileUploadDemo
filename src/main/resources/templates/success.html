@@ -16,10 +16,8 @@
 <div th:each="head:${byId}">
     <span th:text="${head.getId()}"></span><br>
     <span th:text="${head.getHeadAddress()}"></span><br>
-    <!--    <span th:href="@{result.getHeadAddress()}"></span>-->
     <img th:src="@{'/picture/'+${head.getHeadName()}}"></img>
 </div>
-<!--<img src="/picture/1234.jpg" height="500" width="750"/></body>-->
 
 </body>
 </html>

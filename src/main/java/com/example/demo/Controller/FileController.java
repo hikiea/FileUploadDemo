@@ -49,7 +49,7 @@ public class FileController {
             String HeadName = hToken + fileName;
 
             // 5. 图片存放的文件夹地址
-            String filePath = "C:\\Users\\Lzy\\Desktop\\FileUploadDemo\\src\\main\\resources\\static\\picture\\";
+            String filePath = "C:\\Users\\Lzy\\Desktop\\demo\\src\\main\\resources\\static\\picture\\";
             // 6.  图片的路径 = 文件夹地址 + 名字
             String fileAddress = filePath + HeadName;
             try{
@@ -58,10 +58,12 @@ public class FileController {
                 // 参数二：图片存放的文件夹地址
                 // 参数三：图片的名字（加密后）
                 FileUtil.uploadFile(file.getBytes(),filePath,HeadName);
+
                 // 把图片路径,图片名写入数据库
                 head.setHeadAddress(fileAddress);
                 head.setHeadName(HeadName);
                 addHeadAddress.insert(head);
+
             } catch (Exception e){
             }
             return "success";
